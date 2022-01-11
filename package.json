@@ -1,0 +1,23 @@
+{
+  "name": "testingapi",
+  "version": "1.0.0",
+  "description": "A node api for testing purposes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/John-H-Smith/api-test.git"
+  },
+  "author": "John-H-Smith",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/John-H-Smith/api-test/issues"
+  },
+  "homepage": "https://github.com/John-H-Smith/api-test#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}
