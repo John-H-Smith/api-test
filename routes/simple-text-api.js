@@ -3,6 +3,11 @@ const router = express.Router();
 
 let entries = [];
 
+router.use( ( req, res, next ) => {
+	res.header( 'Cache-Control', 'public, max-age=0' );
+	next();
+});
+
 // Get all entries
 router.get( '/', async ( req, res ) => {
     res.status( 200 ).send( entries );
