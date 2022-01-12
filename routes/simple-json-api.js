@@ -4,7 +4,6 @@ const router = express.Router();
 let entries = [];
 
 router.use( ( req, res, next ) => {
-	res.header( 'Cache-Control', 'public, max-age=0' );
 	res.header( 'Content-Type', 'application/json' );
 	next();
 });

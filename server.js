@@ -4,6 +4,14 @@ const express = require( 'express' );
 const bodyParser = require( 'body-parser' );
 const app = express();
 
+app.use( ( req, res, next ) => {
+	res.header( 'Cache-Control', 'public, max-age=0' );
+    res.header( "Access-Control-Allow-Origin", "*");
+    res.header( "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
+    res.header( 'Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS' );
+	next();
+});
+
 //Routes
 app.use( '/simple-text-api', require( './routes/simple-text-api' ) );
 
